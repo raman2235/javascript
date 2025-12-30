@@ -25,6 +25,7 @@ let h1=document.querySelector("h1");
 //h1 is like a object and we select the key in object by . and which we want to change we select that key in h1 object
 h1.textContent="hello raman kaisi ho";
 h1.innerText="helooooo guyss";
+//text content is faster than inner text
 
 
 //1.2html badalna
@@ -50,9 +51,9 @@ a.removeAttribute("href");
 let h2=document.createElement("h2");
 h2.textContent="hello im created";
 //element ko append krna sabse last mai
-document.body.append(h2);
+//document.body.append(h2);
 //element ko prepand krna sabse pehle 
-//document.body.prepend(h2);
+document.body.prepend(h2);
 //div mai add krdiya 
 //document.querySelector("div").appendChild(h2);
 
