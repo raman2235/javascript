@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <style>
+        #hide{
+            display: none;
+        }
+        #emailclass{
+            display: none;
+        }
+        #pasclass{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" id="name" placeholder="name"><br>
+         <!--required minlength="5" if we werite it inside
+          the input tag it is inline validation but it is 
+          easy to passso it is not recommed-->
+        <div id="hide">
+            <small>your name should be greater than 2 characters</small><br>
+        </div>
+        <input type="text" id="email" placeholder="email"><br>
+        <div id="emailclass">
+            <small id="emailerror">email is not acc to specified format</small>
+            <br>
+        </div>
+        <input type="password" id="password"placeholder="password"><br>
+        <div id="pasclass">
+            <small id="passworderror">password is not acc to specified format</small>
+            <br>
+        </div>
+        
+        <select id="selection">
+            <option value="male">male</option>
+            <option value="female">female</option>
+            <option value="others">others</option>
+        </select><br>
+        <textarea id="textt" placeholder="tell us about you"></textarea><br>
+        <input type="submit">
+    </form>
+    <script src="formvalidation.js"></script>
+</body>
+</html>

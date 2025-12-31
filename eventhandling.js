@@ -49,6 +49,23 @@ window.addEventListener("keydown",function(dets){
     }
 })
 
+//6. mouseover
+let mousee=document.querySelector("#mousee")
+mousee.addEventListener("mouseover",function(){
+    mousee.style.backgroundColor="green";
+})
+//7.mouseout
+mousee.addEventListener("mouseout",function(){
+    mousee.style.backgroundColor="brown";
+})
+//8.mousemove
+window.addEventListener("mousemove", function(dets) {
+    console.log(dets.clientX, dets.clientY);
+    mousee.style.top = dets.clientY + "px";
+    mousee.style.left = dets.clientX + "px";
+})
+
+
 //example
 let form=document.querySelector("form");
 let main=document.querySelector(".main");
@@ -92,3 +109,32 @@ form.addEventListener("submit",function(dets){
     })
 })
 
+
+//event object
+//the details of the event is called event object like dets in our function
+
+//target
+//jispai event ho rha hai
+
+//event bubbling
+//jispe event aayega agr uspr listener nhi hua tuo humara
+//  event uske parent par listner dhoondega, aur aisa krte
+//  krte upr ki trf move kreg
+/* main div
+    nav div
+       links
+        button
+*/         
+//jaise ab event button pai aaya pr uspr listner nhi hai tuo voh uske parent pai chla jayeganav div pai
+//aur uska chl jayega fr voh apne parent pai jayega uska chlayega and aisa hota rhega html tag tk
+
+
+//event capturing
+//yeh opposite hai event bubbling ka
+//jb bhi hum koi event krtr hai tuo jo event flow hau voh do phases mai chltahai
+//phase 1: event top element se neeche ki taraf aayega
+//phase 2: event raised element se parent ki taraf jayega
+//pehle event 1 hoti hi but by default voh off rehti hai, agr hum capture phase on krde tuo phase 1 pehle hoga
+
+//pehle capture phase chlta hai fr bubbling
+//elememt.addEventListener("event",function(){},true) -- capture phase on
